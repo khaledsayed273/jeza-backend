@@ -1,0 +1,7 @@
+﻿CREATE TABLE IF NOT EXISTS saudization_rules (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  code VARCHAR(100) NOT NULL UNIQUE,
+  equiredPercentage INT NOT NULL,
+  minEmployees INT DEFAULT 1,
+  sortOrder INT DEFAULT 0 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,18 +1,27 @@
 {
-  "include": ["src/**/*", "drizzle/**/*", "tests/**/*"],
-  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*", "drizzle/**/*"],
+  "exclude": ["node_modules", "dist", "tests"],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "noEmit": true,
+
+    "rootDir": ".",
+    "outDir": "./dist",
+
+    "noEmit": false,
+
     "module": "ESNext",
+    "moduleResolution": "bundler",
     "target": "ES2022",
+
     "strict": true,
     "lib": ["esnext"],
+
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+
     "types": ["node"],
+
     "paths": {
       "@/*": ["./src/*"],
       "@shared/*": ["./src/shared/*"]

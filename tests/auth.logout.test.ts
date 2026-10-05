@@ -7,7 +7,7 @@ describe("auth.logout", () => {
     const app = buildApp();
     const res = await app.inject({
       method: "POST",
-      url: "/api/auth/logout",
+      url: "/api/v1/auth/logout",
     });
 
     expect(res.statusCode).toBe(200);

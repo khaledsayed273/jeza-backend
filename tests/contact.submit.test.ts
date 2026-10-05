@@ -11,7 +11,7 @@ describe("contact.submit", () => {
     const app = buildApp();
     const res = await app.inject({
       method: "POST",
-      url: "/api/contact/submit",
+      url: "/api/v1/contact/submit",
       payload: {
         requestType: "individual",
         name: "Test User",

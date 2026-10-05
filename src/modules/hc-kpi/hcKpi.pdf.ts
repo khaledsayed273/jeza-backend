@@ -63,7 +63,7 @@ function trField(translations: Record<string, Record<string, string>>, lang: str
 }
 
 export function registerHcKpiPdfRoute(app: FastifyInstance) {
-  app.get("/api/hc-kpi-pdf/:reportId", async (req, reply) => {
+  app.get("/api/v1/hc-kpi-pdf/:reportId", async (req, reply) => {
     const reportId = parseInt((req.params as { reportId: string }).reportId);
     if (isNaN(reportId)) {
       throw BadRequestError("Invalid report ID");

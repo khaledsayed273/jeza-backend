@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { buildApp } from "../src/app";
 describe("system + content routes", () => {
-    it("GET /api/v1/system/health returns ok", async () => {
+    it("GET /api/v1/health returns ok", async () => {
         const app = buildApp();
         const res = await app.inject({
             method: "GET",
-            url: "/api/v1/system/health?timestamp=123",
+            url: "/api/v1/health?timestamp=123",
         });
         expect(res.statusCode).toBe(200);
         expect(res.json()).toEqual({ ok: true });

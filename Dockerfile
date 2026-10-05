@@ -30,6 +30,6 @@ COPY --from=builder /app/dist ./dist
 EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
-  CMD wget -qO- http://127.0.0.1:8080/api/v1/system/health || exit 1
+  CMD wget -qO- http://127.0.0.1:8080/api/v1/health || exit 1
 
 CMD ["node", "dist/index.js"]

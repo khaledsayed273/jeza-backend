@@ -26,12 +26,10 @@ RUN pnpm install --frozen-lockfile
 RUN mkdir -p /app/uploads
 
 COPY --from=builder /app/dist ./dist
-COPY docker-entrypoint.sh ./docker-entrypoint.sh
-RUN chmod +x ./docker-entrypoint.sh
 
 EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
   CMD wget -qO- http://127.0.0.1:8080/api/system/health || exit 1
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["node", "dist/index.js"]

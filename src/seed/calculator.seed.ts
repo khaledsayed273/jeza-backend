@@ -7,7 +7,7 @@ import {
   terminationNoEntitlement,
   nationalityRulesNationalities,
   nationalityRulesSizeThresholds,
-} from "../../drizzle/schema";
+} from "../db/schema";
 
 // ─────────────────────────────────────────────────────────────────────
 // Data copied from:

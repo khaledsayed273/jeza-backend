@@ -10,7 +10,7 @@ import {
   siteResourceQuestions,
   siteFaqCategories,
   siteFaqQuestions,
-} from "../../drizzle/schema";
+} from "../db/schema";
 import {
   HOME_SERVICES,
   ABOUT_CERTIFICATIONS,

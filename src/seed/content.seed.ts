@@ -4,7 +4,7 @@ import {
   hrCategories, hrSources, hrImages, updateSources,
   templateCategories, hrForms,
   policyCategories, policies, declarations, translations,
-} from "../../drizzle/schema";
+} from "../db/schema";
 
 // ─── HR Explainers ──────────────────────────────────────────────────────────
 

@@ -5,7 +5,7 @@ import {
   disclosurePoints,
   sectorBenchmarks,
   jobBenchmarks,
-} from "../../drizzle/schema";
+} from "../db/schema";
 
 // ─────────────────────────────────────────────────────────────────────
 // Data copied from:

@@ -1,6 +1,6 @@
 import type { MySql2Database } from "drizzle-orm/mysql2";
 import { inArray } from "drizzle-orm";
-import { quizCategories as quizCatTable, quizQuestions as quizQTable, translations } from "../../drizzle/schema";
+import { quizCategories as quizCatTable, quizQuestions as quizQTable, translations } from "../db/schema";
 import { quizCategories as quizCatData } from "./quizData";
 
 async function tr(db: MySql2Database<any>, entityType: string, entityId: number, lang: string, field: string, value: string) {

@@ -26,7 +26,7 @@ Fastify 5 + Drizzle ORM (MySQL) + Zod v4 backend for a bilingual Arabic/English 
 * Guards: `src/plugins/guard.ts` (`attachUser`, `requireUser`, `requireAdmin`).
 * Throw `HttpError` / `ZodError` and let the central error handler map them to responses; avoid manual `reply.status()` error handling unless required.
 * Rate limiting is `global: false`; enable it per route when needed.
-* Environment is loaded through `src/config/env.ts`; `JWT_SECRET` is required.
+* Environment is loaded through `src/config/env.ts`; `JWT_SECRET` and `DATABASE_URL` are required (single source of truth for the database, no `DB_HOST`/`DB_PORT`/etc).
 * `/uploads/` is served from `process.cwd()`.
 
 ## Data

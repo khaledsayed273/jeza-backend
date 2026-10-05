@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { inArray } from "drizzle-orm";
-import { ministerialSectors, ministerialProfessions, ministerialPhases, translations } from "../../drizzle/schema";
+import { ministerialSectors, ministerialProfessions, ministerialPhases, translations } from "../db/schema";
 import { ministerialSectors as sectorData } from "./ministerialData";
 
 async function tr(db: any, entityType: string, entityId: number, lang: string, field: string, value: string) {

@@ -4,7 +4,7 @@ import {
   hrCostItems,
   leaveTypes,
   employeeMarketData,
-} from "../../drizzle/schema";
+} from "../db/schema";
 
 // ─────────────────────────────────────────────────────────────────────
 // Public site constants (consumed by siteNormalized.seed.ts)

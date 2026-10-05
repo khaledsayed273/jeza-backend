@@ -1,6 +1,6 @@
 import type { MySql2Database } from "drizzle-orm/mysql2";
 import { inArray } from "drizzle-orm";
-import { departments, jobDescriptions, translations } from "../../drizzle/schema";
+import { departments, jobDescriptions, translations } from "../db/schema";
 
 async function tr(db: MySql2Database<any>, entityType: string, entityId: number, lang: string, field: string, value: string) {
   await db.insert(translations).values({ entityType, entityId, lang, field, value });

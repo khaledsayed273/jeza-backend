@@ -4,7 +4,7 @@ import { getUserByEmail, createUser, adminUpdateUser, updatePassword } from "../
 
 const ADMIN = {
   name: "Khaled",
-  email: "khaled@khaled.com",
+  email: "khaledsayed273@gmail.com",
   password: "123456",
 };
 
@@ -23,13 +23,13 @@ export async function seedAdminUser(_db: MySql2Database<any>) {
     if (needsUpdate) {
       await adminUpdateUser(existing.id, { role: "admin", name: ADMIN.name });
       if (!passwordOk) await updatePassword(existing.id, hash);
-      console.log("  ✅ Existing user updated to admin (khaled@khaled.com)");
+      console.log("  ✅ Existing user updated to admin (khaledsayed273@gmail.com)");
     } else {
-      console.log("  ✅ Admin user already up to date (khaled@khaled.com)");
+      console.log("  ✅ Admin user already up to date (khaledsayed273@gmail.com)");
     }
     return;
   }
 
   await createUser({ email: ADMIN.email, password: hash, name: ADMIN.name, role: "admin" });
-  console.log("  ✅ Created admin user (khaled@khaled.com)");
+  console.log("  ✅ Created admin user (khaledsayed273@gmail.com)");
 }

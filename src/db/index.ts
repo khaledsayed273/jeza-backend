@@ -1,6 +1,6 @@
 import { drizzle, type MySql2Database } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
-import * as schema from "../../drizzle/schema";
+import * as schema from "./schema";
 import { ENV } from "../config/env";
 
 export type Database = MySql2Database<typeof schema>;
@@ -10,11 +10,7 @@ let db: Database | null = null;
 export function getDb(): Database {
   if (!db) {
     const pool = mysql.createPool({
-      host: ENV.db.host,
-      port: ENV.db.port,
-      user: ENV.db.user,
-      password: ENV.db.pass,
-      database: ENV.db.name,
+      uri: ENV.databaseUrl,
       waitForConnections: true,
       connectionLimit: 10,
     });
@@ -23,4 +19,4 @@ export function getDb(): Database {
   return db;
 }
 
-export * from "../../drizzle/schema";
+export * from "./schema";

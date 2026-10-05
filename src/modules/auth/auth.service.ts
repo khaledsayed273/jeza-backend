@@ -134,10 +134,7 @@ export async function register(input: { email: string; password: string; name: s
   }
 
   const hashed = await hashPassword(input.password);
-  const role: "admin" | "user" =
-    ENV.adminEmail && input.email.toLowerCase() === ENV.adminEmail.toLowerCase()
-      ? "admin"
-      : "user";
+  const role: "admin" | "user" = "user";
 
   const user = await repo.createUser({
     email: input.email,

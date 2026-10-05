@@ -1,6 +1,6 @@
 import type { MySql2Database } from "drizzle-orm/mysql2";
 import { eq } from "drizzle-orm";
-import { siteConfig } from "../../drizzle/schema";
+import { siteConfig } from "../db/schema";
 
 const configEntries = [
   {

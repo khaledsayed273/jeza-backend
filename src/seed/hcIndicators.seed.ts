@@ -1,6 +1,6 @@
 import type { MySql2Database } from "drizzle-orm/mysql2";
 import { inArray } from "drizzle-orm";
-import { hcKpiCategories, hcBuiltinIndicators, translations } from "../../drizzle/schema";
+import { hcKpiCategories, hcBuiltinIndicators, translations } from "../db/schema";
 const HC_CATEGORIES = [
   { key: "saudization",  ar: "التوطين والتنوع",        en: "Saudization & Diversity",    color: "oklch(0.55 0.18 145)" },
   { key: "retention",    ar: "الاستقطاب والاحتفاظ",    en: "Recruitment & Retention",    color: "oklch(0.55 0.22 220)" },

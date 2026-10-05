@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { templateCategories, hrForms } from "../../../drizzle/schema";
+import { templateCategories, hrForms } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getTemplatesData() {

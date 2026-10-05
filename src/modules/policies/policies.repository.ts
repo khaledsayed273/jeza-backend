@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { policyCategories, policies } from "../../../drizzle/schema";
+import { policyCategories, policies } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getPoliciesData() {

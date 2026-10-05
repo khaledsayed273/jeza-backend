@@ -1,14 +1,14 @@
+import "dotenv/config";
+
 import { defineConfig } from "drizzle-kit";
 
+declare const process: { env: { DATABASE_URL: string } };
+
 export default defineConfig({
-  schema: "./drizzle/schema.ts",
   out: "./drizzle",
+  schema: "./src/db/schema",
   dialect: "mysql",
   dbCredentials: {
-    host: process.env.DB_HOST || "127.0.0.1",
-    port: Number(process.env.DB_PORT || 3306),
-    user: process.env.DB_USER || "root",
-    password: process.env.DB_PASS || "",
-    database: process.env.DB_NAME || "jeza-saudization",
+    url: process.env.DATABASE_URL,
   },
 });

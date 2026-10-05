@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { declarations } from "../../../drizzle/schema";
+import { declarations } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getDeclarationsData() {

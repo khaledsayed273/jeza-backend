@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { hrCategories, hrSources, hrImages } from "../../../drizzle/schema";
+import { hrCategories, hrSources, hrImages } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getHrExplainersData() {

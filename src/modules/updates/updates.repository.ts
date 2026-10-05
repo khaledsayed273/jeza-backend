@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { updateSources } from "../../../drizzle/schema";
+import { updateSources } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getUpdatesData() {

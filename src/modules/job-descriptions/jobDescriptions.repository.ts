@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { departments, jobDescriptions } from "../../../drizzle/schema";
+import { departments, jobDescriptions } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getJobDescriptionsData() {

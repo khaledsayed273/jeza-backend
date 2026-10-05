@@ -1,5 +1,5 @@
 import { getDb } from "../../db";
-import { siteConfig } from "../../../drizzle/schema";
+import { siteConfig } from "../../db/schema";
 
 export type SiteConfig = Record<string, string>;
 

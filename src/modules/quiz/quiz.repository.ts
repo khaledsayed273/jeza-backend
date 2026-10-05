@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { quizCategories, quizQuestions } from "../../../drizzle/schema";
+import { quizCategories, quizQuestions } from "../../db/schema";
 import { fetchTranslations } from "../../shared/translations";
 
 export async function getQuizData() {

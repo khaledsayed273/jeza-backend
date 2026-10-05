@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { hrCostSections, hrCostItems } from "../../../drizzle/schema";
+import { hrCostSections, hrCostItems } from "../../db/schema";
 
 export async function getHrCostContent(): Promise<unknown> {
   const sections = await getDb().select().from(hrCostSections).orderBy(asc(hrCostSections.sortOrder));

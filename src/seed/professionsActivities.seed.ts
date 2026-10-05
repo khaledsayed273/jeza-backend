@@ -4,7 +4,7 @@ import {
   professionCategoryJobs,
   professionCategoryPhases,
   activities2026 as activities2026Table,
-} from "../../drizzle/schema";
+} from "../db/schema";
 
 // ─────────────────────────────────────────────────────────────────────
 // Data copied from client/src/pages/CalculatorPage.tsx

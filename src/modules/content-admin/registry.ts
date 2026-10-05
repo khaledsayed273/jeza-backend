@@ -15,7 +15,7 @@ import {
   quizQuestions,
   templateCategories,
   hrForms,
-} from "../../../drizzle/schema";
+} from "../../db/schema";
 
 export type IdColumn = "code" | "key" | "id";
 

@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { trainingDecisions, trainingSectors, disclosurePoints } from "../../../drizzle/schema";
+import { trainingDecisions, trainingSectors, disclosurePoints } from "../../db/schema";
 
 export type TrainingDecision = { num: string; ar: string; en: string };
 export type TrainingSector = { ar: string; en: string };

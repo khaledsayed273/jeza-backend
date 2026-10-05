@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { sectorBenchmarks, jobBenchmarks } from "../../../drizzle/schema";
+import { sectorBenchmarks, jobBenchmarks } from "../../db/schema";
 
 export type TurnoverContent = {
   sectorBenchmarks: unknown;

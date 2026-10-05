@@ -1,6 +1,6 @@
 import { and, eq, sql } from "drizzle-orm";
 import { getDb } from "../db";
-import { translations, type InsertTranslation } from "../../drizzle/schema";
+import { translations, type InsertTranslation } from "../db/schema";
 
 type TrMap = Map<number, Record<string, Record<string, string>>>;
 

@@ -5,6 +5,7 @@ import cookie from "@fastify/cookie";
 import rateLimit from "@fastify/rate-limit";
 import fastifyStatic from "@fastify/static";
 import multipart from "@fastify/multipart";
+import { mkdirSync } from "node:fs";
 import path from "node:path";
 import { z } from "zod";
 import { HttpError } from "./shared/errors";
@@ -45,8 +46,14 @@ export function buildApp(): FastifyInstance {
     crossOriginEmbedderPolicy: false,
   });
 
+  // Restrict CORS in production via CORS_ORIGIN (comma-separated).
+  // Defaults to reflecting the request origin (with credentials).
+  const corsOrigins = process.env.CORS_ORIGIN?.split(",")
+    .map((o) => o.trim())
+    .filter(Boolean);
+
   app.register(cors, {
-    origin: true,
+    origin: corsOrigins?.length ? corsOrigins : true,
     credentials: true,
     methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE"],
   });
@@ -54,6 +61,9 @@ export function buildApp(): FastifyInstance {
   app.register(cookie);
 
   app.register(rateLimit, { global: false });
+
+  // Ensure the uploads directory exists (fresh containers/volumes).
+  mkdirSync(path.join(process.cwd(), "uploads"), { recursive: true });
 
   app.register(fastifyStatic, {
     root: path.join(process.cwd(), "uploads"),

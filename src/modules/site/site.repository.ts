@@ -1,6 +1,6 @@
 import { asc } from "drizzle-orm";
 import { getDb } from "../../db";
-import { siteHomeServices, siteAboutCertifications, siteAboutStats, siteAboutCourses, siteAboutContacts, siteResourceDecisions, siteResourceLinks, siteResourceQuestions, siteFaqCategories, siteFaqQuestions } from "../../../drizzle/schema";
+import { siteHomeServices, siteAboutCertifications, siteAboutStats, siteAboutCourses, siteAboutContacts, siteResourceDecisions, siteResourceLinks, siteResourceQuestions, siteFaqCategories, siteFaqQuestions } from "../../db/schema";
 
 export type HomeService = {
   id: string;

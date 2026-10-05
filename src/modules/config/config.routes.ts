@@ -3,6 +3,6 @@ import { requireAdmin } from "../../plugins/guard";
 import * as configController from "./config.controller";
 
 export function registerConfigRoutes(app: FastifyInstance) {
-  app.get("/api/config", configController.getConfig);
-  app.patch("/api/admin/config/:key", { preHandler: requireAdmin }, configController.updateConfig);
+  app.get("/api/v1/config", configController.getConfig);
+  app.patch("/api/v1/admin/config/:key", { preHandler: requireAdmin }, configController.updateConfig);
 }

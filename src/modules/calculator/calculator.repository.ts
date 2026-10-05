@@ -12,7 +12,7 @@ import {
   terminationNoEntitlement,
   nationalityRulesNationalities,
   nationalityRulesSizeThresholds,
-} from "../../../drizzle/schema";
+} from "../../db/schema";
 
 const num = (v: unknown) => (v === null || v === undefined ? v : Number(v));
 
